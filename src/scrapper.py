@@ -16,6 +16,12 @@ class Scrapper:
         return html
 
     def player_table(self, total_pages, url_site):
+        '''
+        Function responsible for collecting data from each player in the table and manipulating
+        :param total_pages: Parameter that defines which page the Scrapper will go to
+        :param url_site: Parameter that defines the Url of the Championship and session in which the data will be collected
+        :return: Returns table data formatted in dict
+        '''
         player_data_list = []
 
         for page_num in range(0, total_pages + 1):
